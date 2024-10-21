@@ -25,6 +25,8 @@ def create_gauge_chart(probability):
                 'axis': {
                     'range': [0, 100],
                     'tickwidth': 1,
+                    'tickmode': 'array',
+                    'tickvals': [0, 20, 40, 60, 80, 100] # Update tick values if needed
                 },
                 'bar': {'color': color},
                 'bgcolor': "rgba(0,0,0,0)",
@@ -49,7 +51,7 @@ def create_gauge_chart(probability):
         plot_bgcolor="rgba(0,0,0,0)",
         width=400,
         height=300,
-        margin=dict(l=20, r=20, t=50, b=20)
+        margin=dict(l=20, r=30, t=50, b=20)
     )
 
     # Configuration for the plot, including the color-changing script
